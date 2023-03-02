@@ -1,0 +1,22 @@
+.showcase {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 89vh;
+  gap: 2rem;
+  color: #333;
+  font-weight: 200;
+}
+
+.showcase_text h1 {
+  font-size: 4rem;
+  border-bottom: #ffb006 2px solid;
+  padding-bottom: 1rem;
+  width: 80%;
+}
+.showcase_text p {
+  letter-spacing: 1px;
+  text-align: left;
+  line-height: 1.5rem;
+  margin-right: 1.3rem;
+}
