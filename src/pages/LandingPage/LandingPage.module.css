@@ -7,6 +7,9 @@
   color: #333;
   font-weight: 200;
 }
+.showcase_text {
+  animation: slide-left 0.5s ease forwards;
+}
 
 .showcase_text h1 {
   font-size: 4rem;
@@ -20,11 +23,14 @@
   line-height: 1.5rem;
   margin-right: 4rem;
 }
+.projects {
+  animation: slide-right 0.5s ease forwards;
+}
 
 @media (max-width: 767px) {
   .showcase {
     flex-direction: column;
-    gap: 4rem;
+    gap: 2rem;
   }
   .projects {
     width: 200px;
@@ -38,8 +44,39 @@
   }
   .showcase_text p {
     margin: 0 auto;
+    text-align: center;
   }
   .mobile_of {
     display: none;
+  }
+}
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slide-left {
+  from {
+    opacity: 0;
+    transform: translateX(-3rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slide-right {
+  from {
+    opacity: 0;
+    transform: translateX(3rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

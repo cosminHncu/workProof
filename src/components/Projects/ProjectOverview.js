@@ -12,7 +12,7 @@ const ProjectOverview = ({ project, setOverview }) => {
         <Carousel images={Images} />
         <div className={classes.bottom_page}>
           <div className={classes.info}>
-            <h1>📖{Title}</h1>
+            <h2>📖{Title}</h2>
             <a href={CustomerURL} target="_blank">
               🔗Customer Website
             </a>

@@ -24,14 +24,14 @@ const App = () => {
         )}
       </main>
 
-      <footer className={classes.footer}>
+      {/*<footer className={classes.footer}>
         <p>
           made by{" "}
           <a target="_blank" href="https://github.com/cosminHncu">
             cosminHncu
           </a>
         </p>
-      </footer>
+      </footer>*/}
     </>
   );
 };

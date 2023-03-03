@@ -13,6 +13,7 @@
   min-height: 420px;
   overflow: scroll;
   max-height: 200px;
+  animation: slide-right 0.5s ease forwards;
 }
 .no_projects {
   background: #fff;
@@ -45,5 +46,9 @@
   .showcase {
     justify-content: center;
     align-items: flex-start;
+  }
+  .no_projects {
+    text-align: center;
+    font-size: 1.5rem;
   }
 }
