@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/cosminHncu/workProof/static/css/main.5cc8bb27.css",
+    "main.js": "/cosminHncu/workProof/static/js/main.81703688.js",
+    "static/js/787.2894a61f.chunk.js": "/cosminHncu/workProof/static/js/787.2894a61f.chunk.js",
+    "static/media/projects.svg": "/cosminHncu/workProof/static/media/projects.a558af45a4a8fd61c28b26b41cf03020.svg",
+    "static/media/data.svg": "/cosminHncu/workProof/static/media/data.877de19075b161705905fc4b40ab6f05.svg",
+    "static/media/logo.svg": "/cosminHncu/workProof/static/media/logo.da6baf6f01548d71931349924de54e34.svg",
+    "index.html": "/cosminHncu/workProof/index.html",
+    "static/media/list.svg": "/cosminHncu/workProof/static/media/list.0b0575f14b8962243406de17b1ba5c5b.svg",
+    "static/media/blob.svg": "/cosminHncu/workProof/static/media/blob.cfbc31276088e66d2807.svg",
+    "static/media/grid.svg": "/cosminHncu/workProof/static/media/grid.3305ce925a597dcb78f0498aa79c21bb.svg",
+    "static/media/nopic.svg": "/cosminHncu/workProof/static/media/nopic.8b3702ebeac16857e1dbfcdc480b71ac.svg",
+    "static/media/right.svg": "/cosminHncu/workProof/static/media/right.53d14fe7c773c99a1ad7ba1d9b06f41f.svg",
+    "static/media/left.svg": "/cosminHncu/workProof/static/media/left.ce5bf5d412ab92cad51faa9ecd2c5b27.svg",
+    "main.5cc8bb27.css.map": "/cosminHncu/workProof/static/css/main.5cc8bb27.css.map",
+    "main.81703688.js.map": "/cosminHncu/workProof/static/js/main.81703688.js.map",
+    "787.2894a61f.chunk.js.map": "/cosminHncu/workProof/static/js/787.2894a61f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5cc8bb27.css",
+    "static/js/main.81703688.js"
+  ]
+}
