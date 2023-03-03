@@ -11,6 +11,10 @@ const EditProject = ({ data, projects, setProjects, setEdit }) => {
   const handleTitleChange = (event) => {
     setTitle(event.target.value);
   };
+  const handleDelete = (index) => {
+    const newImgs = images.filter((img, i) => index !== i);
+    setImages(newImgs);
+  };
 
   const handleCustomerUrlChange = (event) => {
     setCustomerUrl(event.target.value);
@@ -47,7 +51,6 @@ const EditProject = ({ data, projects, setProjects, setEdit }) => {
         </button>
         <div className={classes.container_info}>
           <h2>Edit your project</h2>
-          <p>Take a few moments to describe your project</p>
         </div>
 
         <div className={classes.form}>
@@ -56,6 +59,7 @@ const EditProject = ({ data, projects, setProjects, setEdit }) => {
               placeholder="📖Project Title"
               type="text"
               maxLength={15}
+              required={true}
               value={title}
               onChange={handleTitleChange}
             />
@@ -63,6 +67,7 @@ const EditProject = ({ data, projects, setProjects, setEdit }) => {
             <input
               placeholder="🔗Customer URL"
               type="url"
+              required={true}
               value={customerUrl}
               onChange={handleCustomerUrlChange}
             />
@@ -82,12 +87,20 @@ const EditProject = ({ data, projects, setProjects, setEdit }) => {
               ) : (
                 images.map((img, index) => {
                   return (
-                    <img
-                      className={classes.img}
-                      key={index}
-                      src={URL.createObjectURL(img)}
-                      alt={`img ${index}`}
-                    />
+                    <div className={classes.card} key={index}>
+                      <img
+                        className={classes.img}
+                        key={index}
+                        src={URL.createObjectURL(img)}
+                        alt={`img ${index}`}
+                      />
+                      <button
+                        className={classes.delete_img}
+                        onClick={() => handleDelete(index)}
+                      >
+                        Remove
+                      </button>
+                    </div>
                   );
                 })
               )}

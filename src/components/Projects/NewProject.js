@@ -18,6 +18,11 @@ const NewProject = ({ setProjects, setAddProject }) => {
     setImages([...images, event.target.files[0]]);
   };
 
+  const handleDelete = (index) => {
+    const newImgs = images.filter((img, i) => index !== i);
+    setImages(newImgs);
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = {
@@ -49,14 +54,16 @@ const NewProject = ({ setProjects, setAddProject }) => {
         <div className={classes.form}>
           <div className={classes.left}>
             <input
+              required={true}
               placeholder="📖Project Title"
               type="text"
-              maxLength={15}
+              maxLength={20}
               value={title}
               onChange={handleTitleChange}
             />
 
             <input
+              required={true}
               placeholder="🔗Customer URL"
               type="url"
               value={customerUrl}
@@ -78,12 +85,20 @@ const NewProject = ({ setProjects, setAddProject }) => {
               ) : (
                 images.map((img, index) => {
                   return (
-                    <img
-                      className={classes.img}
-                      key={index}
-                      src={URL.createObjectURL(img)}
-                      alt={`img ${index}`}
-                    />
+                    <div className={classes.card} key={index}>
+                      <img
+                        className={classes.img}
+                        key={index}
+                        src={URL.createObjectURL(img)}
+                        alt={`img ${index}`}
+                      />
+                      <button
+                        className={classes.delete_img}
+                        onClick={() => handleDelete(index)}
+                      >
+                        Remove
+                      </button>
+                    </div>
                   );
                 })
               )}

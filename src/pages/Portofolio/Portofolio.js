@@ -3,12 +3,13 @@ import classes from "./Portofolio.module.css";
 import NewProject from "../../components/Projects/NewProject";
 import Projects from "../../components/Projects/Projects";
 import data from "../../assets/data.svg";
+import Container from "../../UI/Container/Container";
 
 const Portofolio = ({ projects, setProjects }) => {
   const [addProject, setAddProject] = useState(false);
 
   return (
-    <div className={classes.portofolio}>
+    <Container>
       <div className={classes.container}>
         <div className={classes.header}>
           <h2>Your Projects</h2>
@@ -41,7 +42,7 @@ const Portofolio = ({ projects, setProjects }) => {
           setProjects={setProjects}
         />
       </div>
-    </div>
+    </Container>
   );
 };
 

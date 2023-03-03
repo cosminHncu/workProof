@@ -1,6 +1,8 @@
 import classes from "./Projects.module.css";
 import ProjectCard from "./ProjectCard";
 import Card from "../../UI/Card/Card";
+import grid from "../../assets/grid.svg";
+import list from "../../assets/list.svg";
 
 const Projects = ({ projects, addProject, setProjects, setAddProject }) => {
   const noProjects = (

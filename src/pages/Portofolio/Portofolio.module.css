@@ -1,6 +1,3 @@
-.portofolio {
-  margin: 0 7rem;
-}
 .header {
   height: 50%;
   display: flex;
@@ -24,7 +21,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 4rem;
+  gap: 2rem;
   width: 100%;
   height: 100%;
 }
@@ -48,3 +45,8 @@
   align-items: center;
   background: url("../../assets/blob.svg") no-repeat center center;
 }
+/*@media (max-width: 767px) {
+  .data {
+    display: none;
+  }
+}*/

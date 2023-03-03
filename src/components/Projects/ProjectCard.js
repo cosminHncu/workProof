@@ -3,15 +3,13 @@ import classes from "./ProjectCard.module.css";
 import nopic from "../../assets/nopic.svg";
 import React, { useState } from "react";
 import EditProject from "./EditProject";
-const ProjectCard = ({
-  projects,
-  project,
-  addProject,
-  setProjects,
-  setAddProject,
-}) => {
+import ProjectOverview from "./ProjectOverview";
+const ProjectCard = ({ projects, project, setProjects }) => {
   const [edit, setEdit] = useState(false);
-  const { Title, Images, CustomerURL, id } = project;
+  const [overview, setOverview] = useState(false);
+  const [hide, setHide] = useState(true);
+
+  const { Title, Images, id } = project;
   const Poster = Images.length > 0 && URL.createObjectURL(Images[0]);
 
   const handleDelete = () => {
@@ -21,14 +19,18 @@ const ProjectCard = ({
 
   return (
     <Card>
-      <div className={classes.card}>
+      <div className={hide ? classes.card : classes.hide}>
         <img className={classes.poster} src={Poster ? Poster : nopic} />
-        <h2>{Title}</h2>
-        {/*<a href={CustomerURL} target="_blank">
-          🔗Customer Website
-        </a>*/}
-        <button className={classes.overview}>Overview</button>
-        <div className={classes.actions}>
+        <div className={classes.overlay}>
+          <h2 className={classes.title}>{Title}</h2>
+        </div>
+        <button
+          onClick={() => setOverview((prev) => !prev)}
+          className={classes.overview}
+        >
+          Show More
+        </button>
+        <span className={classes.actions}>
           <button
             className={classes.control_button}
             onClick={() => setEdit((prev) => !prev)}
@@ -37,27 +39,40 @@ const ProjectCard = ({
           </button>
           <button
             className={classes.control_button}
+            onClick={() => setHide((prev) => !prev)}
+          >
+            👁️Hide
+          </button>
+          <button
+            className={classes.control_button}
             onClick={() => handleDelete(id)}
           >
-            ❌Delete
+            🗑️Delete
           </button>
-        </div>
+        </span>
+        {overview && (
+          <ProjectOverview setOverview={setOverview} project={project} />
+        )}
         {edit && (
           <EditProject
             setEdit={setEdit}
             setProjects={setProjects}
             projects={projects}
-            addProject={addProject}
-            setAddProject={setAddProject}
             data={project}
           />
         )}
-        {/*<div className={classes.overlay}>
-          <button>Overview</button>
-        </div>*/}
       </div>
     </Card>
   );
 };
 
 export default ProjectCard;
+
+// <h2>{Title}</h2>
+
+//        <button
+//          onClick={() => setOverview((prev) => !prev)}
+//          className={classes.overview}
+//        >
+//          Overview
+//        </button>

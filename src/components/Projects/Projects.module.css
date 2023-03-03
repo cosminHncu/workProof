@@ -1,26 +1,43 @@
 .showcase {
   background: #fff;
-  margin: 1.5rem;
+  margin: 1.5rem 0rem;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   flex-wrap: wrap;
   padding: 2rem;
-  gap: 2rem;
+  gap: 1rem;
   border-radius: 15px;
   font-weight: 100;
   width: 800px;
   min-height: 420px;
+  overflow: scroll;
+  max-height: 200px;
 }
 .no_projects {
   background: #fff;
-  width: 800px;
-  min-height: 420px;
+  margin: 1.5rem 0rem;
   display: flex;
   justify-content: center;
+
   align-items: center;
   font-size: 2rem;
-  border-radius: 15px;
+  flex-wrap: wrap;
   padding: 2rem;
+  gap: 1rem;
+  border-radius: 15px;
   font-weight: 100;
+  width: 800px;
+  min-height: 420px;
+  max-height: 200px;
+}
+.view {
+  display: flex;
+  gap: 0.5rem;
+  position: relative;
+}
+.control_view {
+  background: transparent;
+  border: none;
+  cursor: pointer;
 }

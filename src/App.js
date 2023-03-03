@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
-import style from "./App.module.css";
+import React, { useState } from "react";
 import Navbar from "./components/Navbar/Navbar";
 import LandingPage from "./pages/LandingPage/LandingPage";
 import Portofolio from "./pages/Portofolio/Portofolio";
+//import classes from "./App.module.css";
 
-const App = (props) => {
+const App = () => {
   const [projects, setProjects] = useState([]);
   const [displayLandingPage, setDisplayLandingPage] = useState(true);
   const [displayProject, setDisplayProject] = useState(false);
@@ -24,7 +24,11 @@ const App = (props) => {
         )}
       </main>
 
-      <footer></footer>
+      {/*<footer className={classes.footer}>
+        <p>
+          made by <a  href="#">cosminHncu</a>
+        </p>
+      </footer>*/}
     </>
   );
 };
