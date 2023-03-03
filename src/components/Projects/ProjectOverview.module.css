@@ -13,16 +13,18 @@
 }
 .info {
   padding: 1rem;
-  position: absolute;
+  background-color: #f4f4f4;
   border-radius: 15px;
   width: 300px;
   top: 0;
+  margin: 0.2rem;
+  text-align: center;
 }
 
 .container {
   position: relative;
   width: 420px;
-  height: 420px;
+  height: 520px;
   border-radius: 12px;
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;

@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 85vh;
+  height: 84vh;
   gap: 2rem;
   color: #333;
   font-weight: 200;
@@ -18,5 +18,28 @@
   letter-spacing: 1px;
   text-align: left;
   line-height: 1.5rem;
-  margin-right: 1.3rem;
+  margin-right: 4rem;
+}
+
+@media (max-width: 767px) {
+  .showcase {
+    flex-direction: column;
+    gap: 4rem;
+  }
+  .projects {
+    width: 200px;
+    height: 200px;
+  }
+  .showcase h1 {
+    font-size: 2rem;
+
+    width: 100%;
+    text-align: center;
+  }
+  .showcase_text p {
+    margin: 0 auto;
+  }
+  .mobile_of {
+    display: none;
+  }
 }

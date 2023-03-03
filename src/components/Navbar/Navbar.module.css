@@ -4,7 +4,7 @@
   justify-content: space-between;
   gap: 29rem;
   background: transparent;
-  height: 50px;
+  height: 70px;
 }
 .logo {
   display: flex;
@@ -28,4 +28,10 @@ a {
 a:hover {
   color: #ffb006;
   transition: 0.2s ease;
+}
+@media (max-width: 767px) {
+  .navigation {
+    gap: 0;
+    height: 100px;
+  }
 }

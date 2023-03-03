@@ -41,3 +41,9 @@
   border: none;
   cursor: pointer;
 }
+@media (max-width: 767px) {
+  .showcase {
+    justify-content: center;
+    align-items: flex-start;
+  }
+}

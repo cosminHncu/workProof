@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Navbar from "./components/Navbar/Navbar";
 import LandingPage from "./pages/LandingPage/LandingPage";
 import Portofolio from "./pages/Portofolio/Portofolio";
-//import classes from "./App.module.css";
+import classes from "./App.module.css";
 
 const App = () => {
   const [projects, setProjects] = useState([]);
@@ -24,11 +24,14 @@ const App = () => {
         )}
       </main>
 
-      {/*<footer className={classes.footer}>
+      <footer className={classes.footer}>
         <p>
-          made by <a  href="#">cosminHncu</a>
+          made by{" "}
+          <a target="_blank" href="https://github.com/cosminHncu">
+            cosminHncu
+          </a>
         </p>
-      </footer>*/}
+      </footer>
     </>
   );
 };

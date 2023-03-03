@@ -45,8 +45,22 @@
   align-items: center;
   background: url("../../assets/blob.svg") no-repeat center center;
 }
-/*@media (max-width: 767px) {
+@media (max-width: 767px) {
   .data {
     display: none;
   }
-}*/
+  .blob {
+    display: none;
+  }
+  .header {
+    gap: 1rem;
+    flex-direction: column;
+  }
+  .header h2 {
+    font-size: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+  }
+}

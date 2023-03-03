@@ -80,3 +80,14 @@
   color: #ffb006;
   transition: 0.2s ease;
 }
+/*@media (max-width: 767px) {
+  .card {
+    width: 100px;
+  }
+  .overlay {
+    width: 50%;
+  }
+  .poster {
+    width: 50%;
+  }
+}*/

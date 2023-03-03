@@ -104,9 +104,10 @@ input:focus {
   width: 340px;
 }
 .img {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   position: relative;
+  border-radius: 15px;
 }
 .submit_button {
   font-size: 1.1rem;
@@ -137,4 +138,31 @@ input:focus {
 .close_button:hover {
   color: #ffb006;
   transition: 0.2s ease;
+}
+@media (max-width: 767px) {
+  .overlay {
+    height: 100%;
+  }
+  .container {
+    width: 300px;
+    flex-direction: column;
+  }
+  .form {
+    flex-direction: column;
+    height: 500px;
+  }
+  .left {
+    padding: 1rem;
+  }
+  .right {
+    width: 290px;
+    height: 500px;
+  }
+  .showcase_img {
+    width: 250px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
 }
